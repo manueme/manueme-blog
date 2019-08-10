@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  display: block;
+  height: 100%;
+}
+
+@font-face {
+  font-family: raleway-semibold;
+  src: url(../assets/fonts/raleway/Raleway-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: raleway-light;
+  src: url(../assets/fonts/raleway/Raleway-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: raleway-medium;
+  src: url(../assets/fonts/raleway/Raleway-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: raleway-regular;
+  src: url(../assets/fonts/raleway/Raleway-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: roboto-mono;
+  src: url(../assets/fonts/roboto_mono/RobotoMono-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: roboto-mono-light;
+  src: url(../assets/fonts/roboto_mono/RobotoMono-Light.ttf) format("truetype");
+}

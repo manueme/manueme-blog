@@ -1,0 +1,12 @@
+@import "../../scss/colors";
+
+.blog_footer {
+  width: 100%;
+  height: 80px;
+  background-color: $header-background;
+  border-top: 8px solid $line-separator;
+  border-bottom: 1px solid $function-color;
+  -webkit-box-shadow: inset 0 3px 8px $shadows-black;
+  -moz-box-shadow: inset 0 3px 8px $shadows-black;
+  box-shadow: inset 0 3px 8px $shadows-black;
+}

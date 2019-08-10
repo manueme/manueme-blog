@@ -1,0 +1,47 @@
+@import "../../scss/colors";
+@import "../blog-ide/blog-ide.component";
+
+.blog_entry_container_wrapper {
+  display: flex;
+  align-items: center;
+  height: $ide-line-height;
+  margin-left: -12px;
+
+  .blog_entry_container_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .expand_collapse_button {
+      width: 22px;
+    }
+    .member_space {
+      font-family: roboto-mono-light, sans-serif;
+      font-size: 24px;
+      font-weight: normal;
+      line-height: $ide-line-height;
+      color: $function-color2;
+      margin-left: 8px;
+    }
+    .member {
+      font-family: roboto-mono-light, sans-serif;
+      font-size: 24px;
+      font-weight: normal;
+      line-height: $ide-line-height;
+      display: flex;
+      align-items: center;
+      color: $class-white;
+    }
+  }
+  .code {
+    font-family: roboto-mono-light, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: $ide-line-height;
+    color: $code-color;
+    margin-left: 8px;
+  }
+  .blog_entry_container_body {
+
+  }
+}

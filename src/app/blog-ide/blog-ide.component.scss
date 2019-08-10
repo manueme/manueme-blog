@@ -1,0 +1,57 @@
+@import "../../scss/colors";
+
+$ide-line-height: 55px;
+
+.blog_ide_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  .blog_ide {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    background: $ide-background;
+
+    .ide_side_bar {
+      height: 100%;
+      width: 73px;
+      background: $line-side-bar;
+      border-right: 2px solid $line-separator;
+
+      .line_numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $ide-line-height;
+        margin-right: 11px;
+        font-family: roboto-mono-light, "Source Code Pro", monospace;
+        font-size: 24px;
+        color: $line-numbers;
+      }
+    }
+
+    .ide_body {
+      height: 100%;
+      width: 100%;
+
+      .include_header {
+        font-family: roboto-mono-light, sans-serif;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: $ide-line-height;
+        color: $include-color;
+        margin-left: 8px;
+      }
+
+      .ide_line_jump {
+        height: $ide-line-height;
+        width: 100%;
+      }
+    }
+  }
+}

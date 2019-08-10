@@ -1,0 +1,15 @@
+<div class="blog_ide_wrapper">
+  <div class="blog_ide">
+    <div class="ide_side_bar">
+      <div class="line_numbers" *ngFor="let number of numbers">{{ number }}</div>
+    </div>
+    <div class="ide_body">
+      <div class="include_header">#include "blog.h"</div>
+      <div class="ide_line_jump"></div>
+      <app-blog-entry-container [spaceName]="'Blog::'" [memberName]="'Blog()'"></app-blog-entry-container>
+      <div class="ide_line_jump"></div>
+      <app-blog-entry-container [spaceName]="'Blog::'" [memberName]="'~Blog()'"></app-blog-entry-container>
+      <div class="ide_line_jump"></div>
+    </div>
+  </div>
+</div>
