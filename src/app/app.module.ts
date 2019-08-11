@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogIdeComponent } from './blog-ide/blog-ide.component';
-import { BlogEntryContainerComponent } from './blog-entry-container/blog-entry-container.component';
+import { BlogEntryContainerComponent } from './blog-ide/blog-entry-container/blog-entry-container.component';
+import { IdeLineNumberComponent } from './blog-ide/ide-line-number/ide-line-number.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BlogEntryContainerComponent } from './blog-entry-container/blog-entry-c
     HeaderComponent,
     FooterComponent,
     BlogIdeComponent,
-    BlogEntryContainerComponent
+    BlogEntryContainerComponent,
+    IdeLineNumberComponent
   ],
   imports: [
     BrowserModule,

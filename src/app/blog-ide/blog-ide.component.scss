@@ -1,6 +1,7 @@
 @import "../../scss/colors";
 
 $ide-line-height: 55px;
+$ide-side-bar-margin: -54px;
 
 .blog_ide_wrapper {
   display: flex;
@@ -22,17 +23,6 @@ $ide-line-height: 55px;
       width: 73px;
       background: $line-side-bar;
       border-right: 2px solid $line-separator;
-
-      .line_numbers {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: $ide-line-height;
-        margin-right: 11px;
-        font-family: roboto-mono-light, "Source Code Pro", monospace;
-        font-size: 24px;
-        color: $line-numbers;
-      }
     }
 
     .ide_body {
@@ -40,15 +30,21 @@ $ide-line-height: 55px;
       width: 100%;
 
       .include_header {
-        font-family: roboto-mono-light, sans-serif;
-        font-size: 24px;
-        font-weight: normal;
-        line-height: $ide-line-height;
-        color: $include-color;
-        margin-left: 8px;
+        display: flex;
+        margin-left: $ide-side-bar-margin;
+        .include_header_text {
+          font-family: roboto-mono-light, sans-serif;
+          font-size: 24px;
+          font-weight: normal;
+          line-height: $ide-line-height;
+          color: $include-color;
+          margin-left: 25px;
+        }
       }
 
+
       .ide_line_jump {
+        margin-left: $ide-side-bar-margin;
         height: $ide-line-height;
         width: 100%;
       }

@@ -9,10 +9,17 @@ export class BlogEntryContainerComponent implements OnInit {
   isOpen = false;
   @Input() spaceName: string;
   @Input() memberName: string;
+  @Input() startLine: number;
+  @Input() lineCount: number;
+  bodyLineNumbers: number[] = [];
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {
+    for (let i = this.startLine + 1; i < (this.startLine + this.lineCount); i++) {
+      this.bodyLineNumbers.push(i);
+    }
   }
 
 }

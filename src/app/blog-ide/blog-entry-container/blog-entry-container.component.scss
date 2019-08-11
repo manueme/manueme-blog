@@ -1,11 +1,9 @@
-@import "../../scss/colors";
-@import "../blog-ide/blog-ide.component";
+@import '../blog-ide.component';
 
 .blog_entry_container_wrapper {
   display: flex;
-  align-items: center;
-  height: $ide-line-height;
-  margin-left: -12px;
+  flex-direction: column;
+  margin-left: $ide-side-bar-margin;
 
   .blog_entry_container_header {
     display: flex;
@@ -14,6 +12,7 @@
 
     .expand_collapse_button {
       width: 22px;
+      cursor: pointer;
     }
     .member_space {
       font-family: roboto-mono-light, sans-serif;
@@ -42,6 +41,9 @@
     margin-left: 8px;
   }
   .blog_entry_container_body {
-
+  }
+  .blog_entry_container_footer {
+    display: flex;
+    flex-direction: row;
   }
 }

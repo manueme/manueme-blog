@@ -3,12 +3,12 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background: url("../assets/blog-background.png");
 }
 
 .blog_content_wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
   width: 100%;
+  background: url("../assets/blog-background.png");
 }
