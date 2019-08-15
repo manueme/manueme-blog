@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BlogIdeComponent } from './blog-ide/blog-ide.component';
 import { BlogEntryContainerComponent } from './blog-ide/blog-entry-container/blog-entry-container.component';
 import { IdeLineNumberComponent } from './blog-ide/ide-line-number/ide-line-number.component';
+import { BlogEntryComponent } from './blog-ide/blog-entry-container/blog-entry/blog-entry.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { IdeLineNumberComponent } from './blog-ide/ide-line-number/ide-line-numb
     FooterComponent,
     BlogIdeComponent,
     BlogEntryContainerComponent,
-    IdeLineNumberComponent
+    IdeLineNumberComponent,
+    BlogEntryComponent
   ],
   imports: [
     BrowserModule,

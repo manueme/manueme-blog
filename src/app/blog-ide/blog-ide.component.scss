@@ -4,22 +4,21 @@ $ide-line-height: 55px;
 $ide-side-bar-margin: -54px;
 
 .blog_ide_wrapper {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
 
   .blog_ide {
+    flex: 1;
     display: flex;
-    height: 100%;
     width: 90%;
     max-width: 1200px;
     background: $ide-background;
 
     .ide_side_bar {
-      height: 100%;
       width: 73px;
       background: $line-side-bar;
       border-right: 2px solid $line-separator;
