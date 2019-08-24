@@ -1,24 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError, mergeMap, tap } from 'rxjs/operators';
 
-import { IEntry } from './entry';
+import { IArticle, IEntry } from './entry';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EntryService {
   private entriesUrl = 'api/entries/entries.json';
+  private articlesUrl = 'api/entries/articles.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getEntries(): Observable<IEntry[]> {
-    return this.http.get<IEntry[]>(this.entriesUrl)
-      .pipe(
-        tap(data => console.log('All: ' + JSON.stringify(data))),
-        catchError(this.handleError)
-      );
+    return this.http.get<IEntry[]>(this.entriesUrl).pipe(
+      tap(),
+      catchError(this.handleError)
+    );
+  }
+
+  getArticle(articleName: string): Observable<IArticle | undefined> {
+    return this.http.get<IArticle[]>(this.articlesUrl).pipe(
+      mergeMap(articles => {
+        return of(articles.find(a => a.article === articleName));
+      }),
+      catchError(this.handleError)
+    );
   }
 
   private handleError(err: HttpErrorResponse) {
@@ -34,5 +43,4 @@ export class EntryService {
     console.error(errorMessage);
     return throwError(errorMessage);
   }
-
 }

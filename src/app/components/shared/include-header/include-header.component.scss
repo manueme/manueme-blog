@@ -1,0 +1,15 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/colors';
+
+.include_header {
+  display: flex;
+  margin-left: $ide-side-bar-margin;
+  .include_header_text {
+    font-family: roboto-mono-light, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: $ide-line-height;
+    color: $include-color;
+    margin-left: 25px;
+  }
+}

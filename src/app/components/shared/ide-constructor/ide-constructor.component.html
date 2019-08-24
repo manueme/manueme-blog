@@ -1,0 +1,37 @@
+<div class="ide_constructor_wrapper">
+  <div class="ide_constructor_header_wrapper">
+    <app-ide-line-number [lineNumber]="startLine"></app-ide-line-number>
+    <img
+      class="expand_collapse_button"
+      [src]="isOpen ? 'assets/img/expanded.code.top.icon.svg' : 'assets/img/collapsed.code.icon.svg'"
+      alt="expand"
+      (click)="isOpen = !isOpen"
+    />
+    <div class="member_space">{{ spaceName }}</div>
+    <div class="member">{{ memberName }}</div>
+    <div class="code">{{ isOpen ? ' {' : ' {...}' }}</div>
+  </div>
+  <div *ngIf="isOpen" class="ide_constructor_body">
+    <div class="ide_constructor_body_line_numbers">
+      <app-ide-line-number *ngFor="let item of bodyLineNumbers" [lineNumber]="item"></app-ide-line-number>
+    </div>
+    <div #ideConstructorBody class="ide_constructor_body_container">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <div *ngIf="isOpen" class="ide_constructor_footer_wrapper">
+    <app-ide-line-number [lineNumber]="startLine + lineCount"></app-ide-line-number>
+    <img class="expand_collapse_button" src="assets/img/expanded.code.bottom.icon.svg" alt="expand" />
+    <div class="code">{{ '}' }}</div>
+  </div>
+</div>
+<app-line-jump  [lineNumber]="startLine + lineCount + 1"></app-line-jump>
+<div class="ide_constructor_wrapper">
+  <div class="ide_constructor_header_wrapper empty">
+    <app-ide-line-number [lineNumber]="startLine + lineCount + 2"></app-ide-line-number>
+    <div class="member_space">{{ spaceName }}</div>
+    <div class="member">~{{ memberName }}</div>
+    <div class="code">=<span class="keyword">default</span>;</div>
+  </div>
+</div>
+<app-line-jump [lineNumber]="startLine + lineCount + 3"></app-line-jump>

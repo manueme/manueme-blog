@@ -1,0 +1,9 @@
+<app-include-header includedFile="blog.h"></app-include-header>
+<app-ide-constructor
+  *ngIf="this.entries"
+  [spaceName]="'Blog::'"
+  [memberName]="'Blog'"
+  [startLine]="3"
+>
+  <app-entry *ngFor="let entry of entries" [entry]="entry"></app-entry>
+</app-ide-constructor>

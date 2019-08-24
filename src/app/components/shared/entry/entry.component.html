@@ -1,0 +1,30 @@
+<div class="blog_entry_wrapper">
+  <div class="decor_gradient"></div>
+  <div class="entry_contents">
+    <img class="entry_image" *ngIf="!isArticle(entry)" [alt]="entry.imgAlt" [src]="entry.imgSrc" />
+    <div class="entry_description" *ngIf="!isArticle(entry)">
+      <div class="entry_title">{{ entry.title }}</div>
+      <div class="entry_brief">{{ entry.brief }}</div>
+      <a class="read_more_btn" routerLink="/article/{{ entry.article }}" routerLinkActive="active"
+        ><div class="comments">{{ '/*  ' }}</div>
+        Read More
+        <div class="comments">{{ '  */' }}</div></a
+      >
+    </div>
+    <div class="article_content" *ngIf="isArticle(entry)">
+      <div class="article_title">{{ entry.title }}</div>
+      <div class="article_element" *ngFor="let element of entry.fullArticle">
+        <div *ngIf="articleElementIsParagraph(element)" class="article_paragraph">
+          {{ element.p }}
+        </div>
+        <div *ngIf="articleElementIsImage(element)">
+          <img class="article_image" [alt]="element.imgAlt" [src]="element.imgSrc" />
+          <div class="article_image_footer">
+            {{ element.imgFooter }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="decor_gradient"></div>
+</div>
