@@ -5,22 +5,19 @@
   flex-direction: column;
   min-height: 272px;
   background: $header-background;
-  margin: 10px 48px 28px 28px;
-  border: 1px solid $entry-border;
   box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
 
   .decor_gradient {
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, rgba($function-color, 0) 0%, $function-color 50%, rgba($function-color, 0) 100%);
+    background: $entry-decoration;
   }
 
   .entry_contents {
     display: flex;
     flex-direction: row;
     height: 100%;
-    margin: 15px;
+    margin: 15px 48px;
 
     .entry_image {
       max-height: 272px;

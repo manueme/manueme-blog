@@ -1,5 +1,6 @@
 @import '../../../../scss/constants';
 @import '../../../../scss/colors';
+@import '../../../../scss/animations';
 
 .ide_constructor_wrapper {
   display: flex;
@@ -14,6 +15,7 @@
     .expand_collapse_button {
       width: 22px;
       cursor: pointer;
+      z-index: 2;
     }
     .member_space {
       font-family: roboto-mono-light, sans-serif;
@@ -31,6 +33,7 @@
       display: flex;
       align-items: center;
       color: $class-white;
+      margin-right: 11px;
     }
   }
   .ide_constructor_header_wrapper.empty {
@@ -38,9 +41,18 @@
       margin-left: 28px;
     }
   }
+
   .ide_constructor_body {
     display: flex;
     flex-direction: row;
+
+    height: 0;
+    flex-basis: 0;
+    transition: height 0.2s ease-in-out, flex-basis 0.2s ease-in-out;
+    -webkit-transition: height 0.2s ease-in-out, flex-basis 0.2s ease-in-out;
+
+    -webkit-animation: swing-out-top-bck 0.2s cubic-bezier(0.200, -0.280, 0.735, 0.045) both;
+    animation: swing-out-top-bck 0.2s cubic-bezier(0.200, -0.280, 0.735, 0.045) both;
 
     .ide_constructor_body_line_numbers {
     }
@@ -52,6 +64,13 @@
       width: 100%;
     }
   }
+  .ide_constructor_body.show {
+    flex-basis: 100%;
+
+    -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+  }
+
   .code {
     display: inline-block;
     font-family: roboto-mono-light, sans-serif;
@@ -59,13 +78,25 @@
     font-weight: normal;
     line-height: $ide-line-height;
     color: $code-color;
-    margin-left: 8px;
 
     .keyword {
       color: $function-color2;
       margin-left: 8px;
     }
+
+    &.hide {
+      opacity: 0;
+      transition: all 0.1s ease-in-out;
+      -webkit-transition: all 0.1s ease-in-out;
+    }
+    &.show {
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition-delay: 0.3s;
+    }
   }
+
   .ide_constructor_footer_wrapper {
     display: flex;
     flex-direction: row;

@@ -9,9 +9,10 @@
     />
     <div class="member_space">{{ spaceName }}</div>
     <div class="member">{{ memberName }}</div>
-    <div class="code">{{ isOpen ? ' {' : ' {...}' }}</div>
+    <div class="code">{{' {'}}</div>
+    <div [ngClass]="'code' + (isOpen ? ' hide' : ' show')">{{'...}'}}</div>
   </div>
-  <div *ngIf="isOpen" class="ide_constructor_body">
+  <div [ngClass]="'ide_constructor_body' + (isOpen ? ' show' : '')">
     <div class="ide_constructor_body_line_numbers">
       <app-ide-line-number *ngFor="let item of bodyLineNumbers" [lineNumber]="item"></app-ide-line-number>
     </div>
@@ -25,7 +26,7 @@
     <div class="code">{{ '}' }}</div>
   </div>
 </div>
-<app-line-jump  [lineNumber]="startLine + lineCount + 1"></app-line-jump>
+<app-line-jump [lineNumber]="startLine + lineCount + 1"></app-line-jump>
 <div class="ide_constructor_wrapper">
   <div class="ide_constructor_header_wrapper empty">
     <app-ide-line-number [lineNumber]="startLine + lineCount + 2"></app-ide-line-number>
