@@ -47,7 +47,7 @@
     flex-direction: row;
 
     height: 0;
-    flex-basis: 0;
+    flex: 1 auto;
     transition: height 0.2s ease-in-out, flex-basis 0.2s ease-in-out;
     -webkit-transition: height 0.2s ease-in-out, flex-basis 0.2s ease-in-out;
 
@@ -65,6 +65,7 @@
     }
   }
   .ide_constructor_body.show {
+    height: 100%;
     flex-basis: 100%;
 
     -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
