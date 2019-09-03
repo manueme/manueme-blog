@@ -46,47 +46,6 @@
         margin-bottom: 25px;
       }
     }
-
-    .article_content {
-      width: 100%;
-      color: white;
-      margin-top: 5px;
-
-      .article_title {
-        font-family: raleway-semibold, sans-serif;
-        font-size: 18px;
-        margin-bottom: 25px;
-        text-align: center;
-      }
-
-      .article_element {
-        display: flex;
-        width: 100%;
-        margin: 15px 0;
-        justify-content: center;
-
-        .article_paragraph {
-          font-family: raleway-regular, sans-serif;
-          font-size: 12px;
-        }
-
-        .article_image {
-          max-height: 260px;
-          object-fit: contain;
-          box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
-          border-radius: 5px;
-          margin-right: 11px;
-        }
-
-        .article_image_footer {
-          font-family: raleway-light, sans-serif;
-          font-size: 12px;
-          text-align: center;
-          font-style: italic;
-          margin-top: 3px;
-        }
-      }
-    }
   }
 
   .read_more_btn {

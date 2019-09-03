@@ -1,18 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { IArticle } from '~/app/services/entry/entry';
+import {
+  AfterViewChecked,
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  ViewEncapsulation
+} from '@angular/core';
 import { EntryService } from '~/app/services/entry/entry.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss']
+  styleUrls: ['./article.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ArticleComponent implements OnInit {
   errorMessage: string;
-  article: IArticle | undefined;
+  article: string | undefined;
 
-  constructor(private entryService: EntryService, private route: ActivatedRoute) { }
+  constructor(private entryService: EntryService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.entryService.getArticle(this.route.snapshot.paramMap.get('id')).subscribe({

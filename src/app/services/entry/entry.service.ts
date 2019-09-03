@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, mergeMap, tap } from 'rxjs/operators';
 
@@ -11,6 +11,13 @@ import { IArticle, IEntry } from './entry';
 export class EntryService {
   private entriesUrl = 'api/entries/entries.json';
   private articlesUrl = 'api/entries/articles.json';
+  private httpOptions = {
+    headers: new HttpHeaders({
+      Accept: 'text/html, application/xhtml+xml, */*',
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }),
+    responseType: 'text' as 'json'
+  };
 
   constructor(private http: HttpClient) {}
 
@@ -21,10 +28,10 @@ export class EntryService {
     );
   }
 
-  getArticle(articleName: string): Observable<IArticle | undefined> {
+  getArticle(articleName: string): Observable<string | undefined> {
     return this.http.get<IArticle[]>(this.articlesUrl).pipe(
       mergeMap(articles => {
-        return of(articles.find(a => a.article === articleName));
+        return this.http.get<string>(`api/entries/${articles.find(a => a.article === articleName).htmlName}`, this.httpOptions);
       }),
       catchError(this.handleError)
     );

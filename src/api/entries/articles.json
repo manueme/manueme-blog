@@ -1,22 +1,6 @@
 [
   {
-    "article": "lorenIpsum",
-    "title": "Loren ipsum dolor sit amet",
-    "imgSrc": "assets/img/blog-entry-image-example.jpg",
-    "brief": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod nisi porta lorem. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Arcu felis bibendum ut tristique et egestas quis ipsum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor.",
-    "imgAlt": "",
-    "fullArticle": [
-      {
-        "p": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod nisi porta lorem. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Arcu felis bibendum ut tristique et egestas quis ipsum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor."
-      },
-      {
-        "imgSrc": "assets/img/blog-entry-image-example.jpg",
-        "imgAlt": "",
-        "imgFooter": "Loren ipsum dolor sit amet"
-      },
-      {
-        "p": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod nisi porta lorem. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Arcu felis bibendum ut tristique et egestas quis ipsum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor."
-      }
-    ]
+    "article": "pixsplat",
+    "htmlName": "pixsplat.html"
   }
 ]

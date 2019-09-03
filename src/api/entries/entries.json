@@ -1,29 +1,9 @@
 [
   {
-    "article": "lorenIpsum",
-    "title": "Loren ipsum dolor sit amet",
-    "imgSrc": "assets/img/blog-entry-image-example.jpg",
-    "brief": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod nisi porta lorem. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Arcu felis bibendum ut tristique et egestas quis ipsum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor.",
-    "imgAlt": ""
-  },
-  {
-    "article": "lorenIpsum",
-    "title": "Loren ipsum dolor sit amet",
-    "imgSrc": "assets/img/blog-entry-image-example.jpg",
-    "brief": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod nisi porta lorem. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Arcu felis bibendum ut tristique et egestas quis ipsum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor.",
-    "imgAlt": ""
-  },
-  {
-    "article": "lorenIpsum",
-    "title": "Loren ipsum dolor sit amet",
-    "imgSrc": "assets/img/blog-entry-image-example.jpg",
-    "brief": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod nisi porta lorem. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Arcu felis bibendum ut tristique et egestas quis ipsum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor.",
-    "imgAlt": ""
-  },
-  {
-    "title": "Loren ipsum dolor sit amet",
-    "imgSrc": "assets/img/blog-entry-image-example.jpg",
-    "brief": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod nisi porta lorem. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Arcu felis bibendum ut tristique et egestas quis ipsum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor.",
+    "article": "pixsplat",
+    "title": "Pixsplat",
+    "imgSrc": "https://www.manueme.com/images/Grid.png",
+    "brief": "Pixsplat is a cross-platform drawing and animation program created to make low-resolution graphics. The main goal of the project is to cover the basic needs of an artist to work with pixel art, however, it is also intended to provide some capabilities of more advanced image editors.<br/><br/>Pixsplat is written in C++ with wxWidgets, OpenGL and FreeImage for the UI, rendering the document canvas, and handling images respectively.",
     "imgAlt": ""
   }
 ]

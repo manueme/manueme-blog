@@ -6,16 +6,7 @@ export interface IEntry {
   brief: string;
 }
 
-export interface IParagraph {
-  p: string;
+export interface IArticle {
+  article: string;
+  htmlName: string;
 }
-
-export interface IImage {
-  imgSrc: string;
-  imgAlt: string;
-  imgFooter: string;
-}
-
-export type IArticle = IEntry & {
-  fullArticle: Array<IParagraph | IImage>;
-};

@@ -42,9 +42,44 @@
     font-family: raleway-regular, sans-serif;
     color: white;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 13px;
     border-top: 2px solid $author-line-border;
-    overflow-x: hidden;
+    overflow: hidden;
+    z-index: 3;
+
+    .sticky_title {
+      flex: 1;
+      font-family: raleway-semibold, sans-serif;
+      color: $class-white;
+      font-weight: normal;
+      font-size: 15px;
+      transition: opacity 0.2s ease-in-out;
+      -webkit-transition: opacity 0.2s ease-in-out;
+      padding-left: 15px;
+      padding-bottom: 1px;
+      opacity: 0;
+
+      span {
+        font-family: raleway-light, sans-serif;
+        color: $function-color;
+        font-weight: normal;
+      }
+    }
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      overflow: visible;
+
+      .profile_pic {
+        top: 24px;
+      }
+
+      .sticky_title {
+        opacity: 1;
+      }
+    }
 
     .profile_pic {
       opacity: 0;
@@ -54,13 +89,14 @@
       width: 190px;
       height: 130px;
       top: 120px;
+      transform: translateY(-5px);
       -webkit-box-shadow: 5px 5px 15px $shadows-black;
       -moz-box-shadow: 5px 5px 15px $shadows-black;
       box-shadow: 5px 5px 15px $shadows-black;
       border-radius: 0 0 0 6px;
       pointer-events: none;
-      transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+      -webkit-transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
     }
 
     .author_name {
@@ -68,6 +104,10 @@
       margin-left: 5px;
       margin-right: 10px;
       margin-top: 2px;
+      pointer-events: none;
+    }
+    .author {
+      pointer-events: none;
     }
 
     .website_links {
@@ -117,7 +157,9 @@
 
       .profile_pic {
         opacity: 1;
+        transform: translateY(0);
       }
     }
   }
+
 }
