@@ -1,26 +1,135 @@
 <div>
-  <div class="article_title">Pixsplat</div>
-  <p class="article_paragraph">
+  <h1>Pixsplat</h1>
+  <p>
     The game development introduced me to the programming world, I had to learn how to code in order to at least
     understand
   </p>
-  <br />
-  <p class="article_paragraph">
+  <p>
     However, it seems that I did not choose the simplest development area to take my first steps in this world, I
     quickly realized that it was not only necessary developer skills but also needed cartoonists, animators and sound
     engineers along with other professionals depending on the project.
   </p>
   <div class="article_element">
-    <img class="article_image" alt="" src="https://www.manueme.com/images/SokobanCopy.gif" />
-    <div class="article_image_footer">My own Sokoban - One of my first tries of making games (2008)</div>
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/SokobanCopy.gif" />
+      <div class="article_image_footer">My own Sokoban - One of my first tries of making games (2008)</div>
+    </div>
   </div>
-  <p class="article_paragraph">
+  <p>
     In most of my projects when drawing and animating I ended up iterating with multiple drawing and animation programs
     looking for something I would never find, a program that can do the work for myself while I do what I can do right,
     coding.
   </p>
-  <br />
-  <p class="article_paragraph">
+  <p>
     But the search was not in vain and I noticed three things that I found very interesting:
+  </p>
+  <ol>
+    <li>The most known options seemed too complex and expensive for me to draw low-resolution pixel drawings.</li>
+    <li>
+      Most of the pixel art-oriented programs were lack of features requiring in most of the cases other programs to do
+      some final tweaks to the job.
+    </li>
+    <li>
+      The options that did not have any of the previous problems were not cross-platform or were web-based with not a
+      very good performance.
+    </li>
+  </ol>
+  <h3>What if I do my own drawing and animation program?</h3>
+  <p>
+    This is how Pixsplat was born, a program that initially would have only the features that I would use for my games.
+    However, the project has evolved and Pixsplat seeks to focus on a unique cross-platform drawing and animation
+    program created to make low-resolution graphics.
+  </p>
+  <h2>Status of Pixsplat</h2>
+  <p>
+    The main goal is to cover the basic needs of an artist to work with pixel art, it is also intended to provide some
+    capabilities of more advanced image editors.
+  </p>
+  <p>
+    Pixsplat is written in C++ with wxWidgets, OpenGL and FreeImage for the UI, rendering the document canvas, and
+    handling images respectively.
+  </p>
+  <h2>Main Features</h2>
+  <h3>Windows and Linux (GTK3)</h3>
+  <p>
+    Pixsplat is being developed in Windows and Linux so it has alphas for both operating systems.
+  </p>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/Windows.png" />
+      <div class="article_image_footer">Windows UI</div>
+    </div>
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/Linux.png" />
+      <div class="article_image_footer">Linux UI</div>
+    </div>
+  </div>
+  <h3>Layer system</h3>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/LayerSystem.gif" />
+    </div>
+  </div>
+  <h3>Classic animation system</h3>
+  <ul>
+    <li>Name multiple animations on the same document</li>
+    <li>Drag and drop frames</li>
+    <li>Visualize and edit frames on the main canvas</li>
+    <li>Change animation speed</li>
+    <li>Draw over animation canvas while the animation is playing</li>
+    <li>Move, scale and modify the reference point of already created frames</li>
+    <li>Export animation as image strips</li>
+  </ul>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/AnimationFramesCreate.gif" />
+      <div class="article_image_footer">Drag and drop frames</div>
+    </div>
+  </div>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/EditFrame.png" />
+      <div class="article_image_footer">Edit the animation</div>
+    </div>
+  </div>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/AnimationDraw.gif" />
+      <div class="article_image_footer">Draw over animation canvas while the animation is playing</div>
+    </div>
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/StripGenerated.png" />
+      <div class="article_image_footer">Automatically generate animation strips</div>
+    </div>
+  </div>
+  <h3>Palette Editor</h3>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/PaletteEditor.png" />
+    </div>
+  </div>
+  <h3>Bitmap Brushes</h3>
+  <p>Customize Pencil, Eraser and Selection tools. Any bitmap can be added to the list of default brushes</p>
+  <h3>Advanced Selection</h3>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/Selection.gif" />
+      <div class="article_image_footer">Round, Square, Free, Pencil and Magic selection modes</div>
+    </div>
+  </div>
+  <h3>Advanced UI</h3>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/AdvancedUI.gif" />
+      <div class="article_image_footer">Customize UI and work with multiple documents</div>
+    </div>
+  </div>
+  <h2>When is Pixsplat going to be available to download?</h2>
+  <p>
+    Pixsplat is on an advanced stage and soon I’ll publish a free beta. Although is important to consider that this is a
+    very complex project and I’m taking my time to work on it, not only to ensure quality but to enjoy the process.
+  </p>
+  <p>
+    Please contact me if you want to know more about Pixsplat, I’ll be glad to chat about it and answer any questions.
   </p>
 </div>

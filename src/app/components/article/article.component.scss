@@ -1,44 +1,82 @@
 .article_entry {
-  margin: 10px 0;
-
   .article_content {
     width: 100%;
     color: white;
     margin-top: 5px;
+    font-family: "Verdana", sans-serif;
 
-    .article_title {
-      font-family: raleway-semibold, sans-serif;
-      font-size: 28px;
+    h1 {
+      font-family: raleway-bold, sans-serif;
+      font-size: 36px;
       margin-bottom: 25px;
       text-align: center;
+    }
+    h2 {
+      opacity: 0.9;
+      font-family: raleway-bold, sans-serif;
+      font-size: 22px;
+      margin-bottom: 25px;
+      margin-top: 25px;
+      text-align: center;
+    }
+    h3 {
+      opacity: 0.9;
+      font-family: raleway-semibold, sans-serif;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
     .article_element {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
       align-items: center;
       margin: 15px 0;
+
+      &.left {
+        justify-content: start;
+      }
     }
 
-    .article_paragraph {
-      composes: article_element;
-      font-family: raleway-regular, sans-serif;
+    p, ol {
       font-size: 12px;
+      margin-bottom: 15px;
+      opacity: 0.8;
+    }
+
+    li {
+      font-size: 12px;
+      margin-left: 20px;
+      margin-bottom: 10px;
     }
 
     .article_image {
-      max-height: 260px;
-      max-width: 100%;
-      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
-      border-radius: 5px;
-    }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
 
-    .article_image_footer {
-      font-family: raleway-light, sans-serif;
-      font-size: 12px;
-      text-align: center;
-      font-style: italic;
-      margin-top: 8px;
+      img {
+        max-height: 280px;
+        max-width: 100%;
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+
+      .article_image_footer {
+        font-family: raleway-light, sans-serif;
+        font-size: 12px;
+        text-align: center;
+        font-style: italic;
+        margin-top: 8px;
+        a {
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

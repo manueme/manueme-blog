@@ -36,6 +36,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @font-face {
+  font-family: raleway-bold;
+  src: url(../assets/fonts/raleway/Raleway-Bold.ttf) format("truetype");
+}
+
+
+@font-face {
   font-family: raleway-light;
   src: url(../assets/fonts/raleway/Raleway-Light.ttf) format("truetype");
 }
