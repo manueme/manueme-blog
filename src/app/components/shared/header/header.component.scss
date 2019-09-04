@@ -1,9 +1,10 @@
 @import '../../../../scss/colors';
+@import '../../../../scss/constants';
 
 .blog_header {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 120px;
   width: 100%;
   background-color: $header-background;
@@ -20,9 +21,8 @@
     color: $class-white;
     font-weight: normal;
     font-size: 48px;
-    margin-left: 39px;
-    margin-top: auto;
-    margin-bottom: 15px;
+    margin-left: 40px;
+    margin-top: 20px;
 
     span {
       font-family: raleway-light, sans-serif;
@@ -78,6 +78,7 @@
 
       .sticky_title {
         opacity: 1;
+        white-space: nowrap;
       }
     }
 
@@ -105,6 +106,7 @@
       margin-right: 10px;
       margin-top: 2px;
       pointer-events: none;
+      white-space: nowrap;
     }
     .author {
       pointer-events: none;
@@ -159,7 +161,29 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      @media (max-width: 500px) {
+        .sticky_title {
+          opacity: 0;
+        }
+      }
     }
   }
+}
 
+@media (max-width: 500px) {
+  .blog_header {
+    align-items: center;
+    height: 100px;
+    h1 {
+      margin-left: 0;
+      margin-top: 10px;
+      font-size: 42px;
+    }
+    .author_line {
+      .profile_pic {
+        top: 100px;
+      }
+    }
+  }
 }

@@ -3,11 +3,17 @@
 
 .line_number {
   height: $ide-line-height;
-  margin-left: -54px;
-  width: 54px;
+  width: $ide-side-bar-width;
   font-family: roboto-mono-light, "Source Code Pro", monospace;
-  font-size: 24px;
+  font-size: 22px;
   line-height: $ide-line-height;
   color: $line-numbers;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .line_number {
+    font-size: 18px;
+    width: $ide-side-bar-width-small;
+  }
 }

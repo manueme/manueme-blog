@@ -17,12 +17,11 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    margin: 15px 48px;
+    margin: 15px 40px;
     flex: 1;
 
     .entry_image {
       max-height: 272px;
-      object-fit: contain;
       box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       margin-right: 11px;
@@ -47,6 +46,24 @@
       }
     }
   }
+  @media (max-width: 800px) {
+    .entry_contents {
+      flex-direction: column;
+      align-items: center;
+      margin: 15px;
+
+      .entry_image {
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      .entry_description {
+        .entry_title {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
 
   .read_more_btn {
     display: flex;
@@ -59,6 +76,7 @@
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     margin-bottom: 15px;
+    margin-top: 20px;
     text-decoration: none;
     color: $include-color;
   }

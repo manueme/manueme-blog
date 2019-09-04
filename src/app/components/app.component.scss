@@ -20,19 +20,38 @@
   .blog_ide {
     flex: 1;
     display: flex;
-    width: 90%;
     max-width: 1200px;
+    width: 100%;
     background: $ide-background;
 
     .ide_side_bar {
-      width: 73px;
+      box-sizing: border-box; // To place the border inside the div
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      width: $ide-side-bar-width;
       background: $line-side-bar;
       border-right: 2px solid $line-separator;
     }
+    .blog_body {
+      flex: 1;
+      margin-left: -$ide-side-bar-width;
+    }
+    @media (max-width: 500px) {
+      .blog_body {
+        margin-left: -$ide-side-bar-width-small;
+      }
+      .ide_side_bar {
+        width: $ide-side-bar-width-small;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .blog_ide {
+      max-width: unset;
 
-    .ide_body {
-      height: 100%;
-      width: 100%;
+      .blog_body {
+        width: 100%;
+      }
     }
   }
 }

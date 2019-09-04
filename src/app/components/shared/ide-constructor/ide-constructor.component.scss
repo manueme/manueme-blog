@@ -5,21 +5,26 @@
 .ide_constructor_wrapper {
   display: flex;
   flex-direction: column;
-  margin-left: $ide-side-bar-margin;
+
+  .expand_collapse_button {
+    width: 20px;
+    margin-left: -10px;
+    cursor: pointer;
+    z-index: 2;
+  }
 
   .ide_constructor_header_wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
 
-    .expand_collapse_button {
-      width: 22px;
-      cursor: pointer;
-      z-index: 2;
+    .ide_constructor_code_wrapper {
+      display: flex;
+      overflow: hidden;
     }
+
     .member_space {
       font-family: roboto-mono-light, sans-serif;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: normal;
       line-height: $ide-line-height;
       color: $function-color2;
@@ -27,18 +32,16 @@
     }
     .member {
       font-family: roboto-mono-light, sans-serif;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: normal;
       line-height: $ide-line-height;
       display: flex;
       align-items: center;
       color: $class-white;
-      margin-right: 11px;
     }
   }
   .ide_constructor_header_wrapper.empty {
     .member_space {
-      margin-left: 28px;
     }
   }
 
@@ -55,13 +58,22 @@
     animation: swing-out-top-bck 0.2s cubic-bezier(0.200, -0.280, 0.735, 0.045) both;
 
     .ide_constructor_body_line_numbers {
+      min-width: $ide-side-bar-width;
     }
 
     .ide_constructor_body_container {
       display: flex;
       flex-direction: column;
-      margin-left: 11px;
-      width: 100%;
+      width: calc(100% - #{$ide-side-bar-width});
+    }
+
+    @media (max-width: 500px) {
+      .ide_constructor_body_line_numbers {
+        min-width: $ide-side-bar-width-small;
+      }
+      .ide_constructor_body_container {
+        width: calc(100% - #{$ide-side-bar-width-small});
+      }
     }
   }
   .ide_constructor_body.show {
@@ -75,10 +87,11 @@
   .code {
     display: inline-block;
     font-family: roboto-mono-light, sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: normal;
     line-height: $ide-line-height;
     color: $code-color;
+    margin-left: 8px;
 
     .keyword {
       color: $function-color2;
