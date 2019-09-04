@@ -6,10 +6,20 @@
     font-family: "Verdana", sans-serif;
 
     h1 {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
       font-family: raleway-bold, sans-serif;
       font-size: 36px;
       margin-bottom: 25px;
       text-align: center;
+      &:after {
+        content: "";
+        height: 1px;
+        margin-top: 37px;
+        width: 100%;
+        background: linear-gradient(90deg, #ffffff00 0%, #ffffff55 50%, #ffffff00 100%);
+      }
     }
     h2 {
       opacity: 0.9;
@@ -25,6 +35,15 @@
       font-size: 16px;
       margin-top: 20px;
       margin-bottom: 20px;
+    }
+
+    .article_date {
+      font-family: raleway-light, sans-serif;
+      font-size: 14px;
+      color: white;
+      opacity: 0.6;
+      text-align: right;
+      width: 100%;
     }
 
     .article_element {

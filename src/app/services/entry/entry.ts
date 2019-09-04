@@ -4,6 +4,7 @@ export interface IEntry {
   imgAlt: string;
   title: string;
   brief: string;
+  date: string; // YYYY/MM/DD
 }
 
 export interface IArticle {
