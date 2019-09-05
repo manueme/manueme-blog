@@ -1,3 +1,5 @@
+@import '../../../scss/colors';
+
 .article_entry {
   .article_content {
     width: 100%;
@@ -78,7 +80,9 @@
       margin: 10px;
 
       img {
-        max-height: 280px;
+        height: 280px;
+        object-fit: contain;
+        background: $line-separator;
         max-width: 100%;
         box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
         border-radius: 5px;

@@ -5,6 +5,10 @@
     "imgSrc": "https://www.manueme.com/images/Grid.png",
     "brief": "Pixsplat is a cross-platform drawing and animation program created to make low-resolution graphics. The main goal of the project is to cover the basic needs of an artist to work with pixel art, however, it is also intended to provide some capabilities of more advanced image editors.<br/><br/>Pixsplat is written in C++ with wxWidgets, OpenGL and FreeImage for the UI, rendering the document canvas, and handling images respectively.",
     "imgAlt": "",
-    "date": "2019/09/01"
+    "date": "2019/09/01",
+    "author": "Manuel Machado",
+    "keywords": "wxWidgets, c++, OpenGL, FreeImage, Pixel-Art",
+    "htmlPath": "pixsplat.html",
+    "description": "Pixsplat is a cross-platform drawing and animation program created to make low-resolution graphics."
   }
 ]

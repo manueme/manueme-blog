@@ -10,7 +10,6 @@ import { IArticle, IEntry } from './entry';
 })
 export class EntryService {
   private entriesUrl = 'api/entries/entries.json';
-  private articlesUrl = 'api/entries/articles.json';
   private httpOptions = {
     headers: new HttpHeaders({
       Accept: 'text/html, application/xhtml+xml, */*',
@@ -28,10 +27,23 @@ export class EntryService {
     );
   }
 
-  getArticle(articleName: string): Observable<string | undefined> {
-    return this.http.get<IArticle[]>(this.articlesUrl).pipe(
-      mergeMap(articles => {
-        return this.http.get<string>(`api/entries/${articles.find(a => a.article === articleName).htmlName}`, this.httpOptions);
+  getArticle(articleName: string): Observable<IArticle | undefined> {
+    return this.http.get<IEntry[]>(this.entriesUrl).pipe(
+      mergeMap(entries => {
+        const entry = entries.find(a => a.article === articleName);
+        if (!entry) {
+          return throwError('Article not found');
+        }
+        return this.http.get<string>(`api/entries/${entry.htmlPath}`, this.httpOptions).pipe(
+          mergeMap(articleHtml => {
+            const article: IArticle = {
+              ...entry,
+              html: articleHtml
+            };
+            return of(article);
+          }),
+          catchError(this.handleError)
+        );
       }),
       catchError(this.handleError)
     );
