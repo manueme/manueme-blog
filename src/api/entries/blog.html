@@ -1,0 +1,52 @@
+<div>
+  <div class="article_date">Sep 1, 2019</div>
+  <h1>Blog Ready</h1>
+  <p>
+    My blog is ready to publish! So let's start with the first article. Here are some details of the implementation.
+  </p>
+  <h3>The design</h3>
+  <p>
+    In <a href="https://decemberlabs.com/">December Labs</a> we have an outstanding design team, most of our projects
+    reach the hands of the developer already looking very good. When I have to start a project for myself and I don't
+    have any design, I like to create a basic layout before opening the IDE, it always ends up speeding the development
+    process. For this web app I created a basic <a href="https://www.figma.com">Figma</a> design:
+  </p>
+  <div class="article_element">
+    <div class="article_image">
+      <img alt="" src="https://www.manueme.com/images/manuemeFigma.png" />
+      <div class="article_image_footer">
+        <a href="https://www.figma.com/file/W6SRBX8bdNLMjLdIaGZO4pa4/manueme"
+          >https://www.figma.com/file/W6SRBX8bdNLMjLdIaGZO4pa4/manueme</a
+        >
+      </div>
+    </div>
+  </div>
+  <h3>Technology</h3>
+  <p><a href="https://angular.io/">Angular</a></p>
+  <h3>Entries</h3>
+  <p>
+    The plan for the blog is to publish one or two articles per month, so for this first version, it is not necessary to
+    prepare any backend service. The blog data will be stored on a JSON simulating an API, each entry of the array will
+    have the meta tag information and a reference to a local HTML file with the article content, here is an example:
+  </p>
+  <pre class="article_code">
+    [<br />
+        {<br />
+          "article": "test"<br />
+          "title": "Test",<br />
+          "imgSrc": "https://www.manueme.com/images/Grid.png",<br />
+          "brief": "This is a test entry",<br />
+          "imgAlt": "",<br />
+          "date": "2019/09/01",<br />
+          "author": "Manuel Machado",<br />
+          "keywords": "Angular",<br />
+          "htmlPath": "test.html",<br />
+          "description": "Hello world"<br />
+        }<br />
+    ]</pre>
+  <h3>The code</h3>
+  <p>
+    The code is public for you to copy, improve, share:
+    <a href="https://github.com/manueme/manueme-blog">https://github.com/manueme/manueme-blog</a>
+  </p>
+</div>

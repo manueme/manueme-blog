@@ -8,7 +8,7 @@ import { IEntry } from '~/app/services/entry/entry';
 })
 export class EntryComponent implements OnInit {
   @Input() entry: IEntry | undefined;
-  private entryDate: Date | undefined;
+  public entryDate: Date | undefined;
 
   constructor() {}
 

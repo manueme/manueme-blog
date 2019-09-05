@@ -7,21 +7,24 @@
     margin-top: 5px;
     font-family: "Verdana", sans-serif;
 
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.2s ease-in-out;
+      -webkit-transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: #27ae60;
+      }
+    }
+
     h1 {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
       font-family: raleway-bold, sans-serif;
       font-size: 36px;
       margin-bottom: 25px;
       text-align: center;
-      &:after {
-        content: "";
-        height: 1px;
-        margin-top: 37px;
-        width: 100%;
-        background: linear-gradient(90deg, #ffffff00 0%, #ffffff55 50%, #ffffff00 100%);
-      }
+      text-shadow: 1px 3px 12px rgba(0,0,0,0.8);
     }
     h2 {
       opacity: 0.9;
@@ -30,8 +33,10 @@
       margin-bottom: 25px;
       margin-top: 25px;
       text-align: center;
+      text-shadow: 1px 3px 12px rgba(0,0,0,0.5);
     }
     h3 {
+      color: #d3ff75;
       opacity: 0.9;
       font-family: raleway-semibold, sans-serif;
       font-size: 16px;
@@ -48,6 +53,24 @@
       width: 100%;
     }
 
+    @media (max-width: 500px) {
+      .article_date {
+        margin-bottom: 10px;
+      }
+    }
+
+    .article_code {
+      background: linear-gradient(90deg, #00000033 50%, #00000000 100%);
+      border-radius: 6px;
+      padding: 10px;
+      color:  #ffffffef;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-shadow: inset 10px 6px 26px -3px rgba(0,0,0,0.3);
+      -moz-box-shadow: inset 10px 6px 26px -3px rgba(0,0,0,0.3);
+      box-shadow: inset 10px 6px 26px -3px rgba(0,0,0,0.3);
+    }
+
     .article_element {
       display: flex;
       flex-direction: row;
@@ -62,14 +85,20 @@
     }
 
     p, ol {
-      font-size: 12px;
+      font-size: 14px;
       margin-bottom: 15px;
       opacity: 0.8;
+      line-height: 1.58;
+
+      &.center {
+        text-align: center;
+      }
     }
 
     li {
-      font-size: 12px;
-      margin-left: 20px;
+      font-size: 14px;
+      line-height: 1.58;
+      margin-left: 40px;
       margin-bottom: 10px;
     }
 
@@ -78,6 +107,7 @@
       flex-direction: column;
       align-items: center;
       margin: 10px;
+      width: 100%;
 
       img {
         height: 280px;
@@ -94,11 +124,9 @@
         text-align: center;
         font-style: italic;
         margin-top: 8px;
-        a {
-          text-decoration: none;
-          color: white;
-          font-weight: bold;
-        }
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
