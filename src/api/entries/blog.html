@@ -21,8 +21,11 @@
       </div>
     </div>
   </div>
-  <h3>Technology</h3>
-  <p><a href="https://angular.io/">Angular</a></p>
+  <h3>Technologies</h3>
+  <ul>
+    <li><a href="https://angular.io/">Angular</a></li>
+    <li><a href="https://sass-lang.com/">Sass</a></li>
+  </ul>
   <h3>Entries</h3>
   <p>
     The plan for the blog is to publish one or two articles per month, so for this first version, it is not necessary to
@@ -30,23 +33,57 @@
     have the meta tag information and a reference to a local HTML file with the article content, here is an example:
   </p>
   <pre class="article_code">
-    [<br />
-        {<br />
-          "article": "test"<br />
-          "title": "Test",<br />
-          "imgSrc": "https://www.manueme.com/images/Grid.png",<br />
-          "brief": "This is a test entry",<br />
-          "imgAlt": "",<br />
-          "date": "2019/09/01",<br />
-          "author": "Manuel Machado",<br />
-          "keywords": "Angular",<br />
-          "htmlPath": "test.html",<br />
-          "description": "Hello world"<br />
-        }<br />
-    ]</pre>
+  [<br />
+    {<br />
+      "article": "test"<br />
+      "title": "Test",<br />
+      "imgSrc": "https://www.manueme.com/images/Grid.png",<br />
+      "brief": "This is a test entry",<br />
+      "imgAlt": "",<br />
+      "date": "2019/09/01",<br />
+      "author": "Manuel Machado",<br />
+      "keywords": "Angular",<br />
+      "htmlPath": "test.html",<br />
+      "description": "Hello world"<br />
+    }<br />
+  ]</pre>
+  <h3>Line numbers</h3>
+  <p>
+    The central component of the application is the ide-constructor, calculates the height of its content (it could be
+    an entry or a complete article) and adds the line numbers by dividing the total height with the line-height.
+  </p>
+  <p>
+    There is a line number component, an empty line component, the include header, and the constructor itself that
+    includes all of these.
+  </p>
+  <h3>Expand and collapse animation</h3>
+  <p>
+    "Giving life" to a site is very important and I like to spend time on it so there's a couple of animations on this
+    web app. The expand and collapse code animation when the user clicks the plus on the minus button on the left side
+    of the "class constructor" was generated in <a href="http://animista.net/">http://animista.net/</a>.
+  </p>
+  <p>
+    Spoiler alert. There's a link to my GitHub at the end of the article, but here is the ide constructor (SCSS) class:
+  </p>
+  <pre class="article_code">
+  .ide_constructor_body {<br/>
+    height: 0;<br/>
+    flex: 1 auto;<br/>
+    transition: height 0.2s ease-in-out, flex-basis 0.2s ease-in-out;<br/>
+    -webkit-transition: height 0.2s ease-in-out, flex-basis 0.2s ease-in-out;<br/>
+    animation: swing-out-top-bck 0.2s cubic-bezier(0.200, -0.280, 0.735, 0.045) both;<br/>
+    -webkit-animation: swing-out-top-bck 0.2s cubic-bezier(0.200, -0.280, 0.735, 0.045) both;<br/>
+    <br/>
+    &.show {<br/>
+        height: 100%;<br/>
+        flex-basis: 100%;<br/>
+        animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;<br/>
+        -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;<br/>
+    }<br/>
+  }</pre>
   <h3>The code</h3>
   <p>
-    The code is public for you to copy, improve, share:
+    The code is public for you to copy, improve and share:
     <a href="https://github.com/manueme/manueme-blog">https://github.com/manueme/manueme-blog</a>
   </p>
 </div>

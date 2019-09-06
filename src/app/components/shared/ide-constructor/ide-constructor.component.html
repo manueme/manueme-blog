@@ -10,7 +10,7 @@
     <div class="ide_constructor_code_wrapper">
       <div class="member_space">{{ spaceName }}</div>
       <div class="member">{{ memberName }}</div>
-      <div class="code">{{ ' {' }}</div>
+      <div class="code">{{ '() {' }}</div>
       <div [ngClass]="'code' + (isOpen ? ' hide' : ' show')">{{ '...}' }}</div>
     </div>
   </div>
@@ -35,7 +35,7 @@
     <div class="ide_constructor_code_wrapper">
       <div class="member_space">{{ spaceName }}</div>
       <div class="member">~{{ memberName }}</div>
-      <div class="code">=<span class="keyword">default</span>;</div>
+      <div class="code">() =<span class="keyword"> default</span>;</div>
     </div>
   </div>
 </div>

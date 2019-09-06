@@ -1,5 +1,17 @@
 [
   {
+    "article": "pixsplat",
+    "title": "Pixsplat",
+    "imgSrc": "https://www.manueme.com/images/Grid.png",
+    "brief": "Pixsplat is a cross-platform drawing and animation program created to make low-resolution graphics. The main goal of the project is to cover the basic needs of an artist to work with pixel art, however, it is also intended to provide some capabilities of more advanced image editors.<br/><br/>Pixsplat is written in C++ with wxWidgets, OpenGL and FreeImage for the UI, rendering the document canvas, and handling images respectively.",
+    "imgAlt": "",
+    "date": "2019/09/02",
+    "author": "Manuel Machado",
+    "keywords": "wxWidgets, c++, OpenGL, FreeImage, Pixel-Art",
+    "htmlPath": "pixsplat.html",
+    "description": "Pixsplat is a cross-platform drawing and animation program created to make low-resolution graphics."
+  },
+  {
     "article": "blog",
     "title": "Blog Ready",
     "imgSrc": "https://www.manueme.com/images/blog.jpg",
@@ -10,17 +22,5 @@
     "keywords": "Angular",
     "htmlPath": "blog.html",
     "description": "My blog is ready to publish! So let's start with the first article. Here are some details of the implementation."
-  },
-  {
-    "article": "pixsplat",
-    "title": "Pixsplat",
-    "imgSrc": "https://www.manueme.com/images/Grid.png",
-    "brief": "Pixsplat is a cross-platform drawing and animation program created to make low-resolution graphics. The main goal of the project is to cover the basic needs of an artist to work with pixel art, however, it is also intended to provide some capabilities of more advanced image editors.<br/><br/>Pixsplat is written in C++ with wxWidgets, OpenGL and FreeImage for the UI, rendering the document canvas, and handling images respectively.",
-    "imgAlt": "",
-    "date": "2019/09/01",
-    "author": "Manuel Machado",
-    "keywords": "wxWidgets, c++, OpenGL, FreeImage, Pixel-Art",
-    "htmlPath": "pixsplat.html",
-    "description": "Pixsplat is a cross-platform drawing and animation program created to make low-resolution graphics."
   }
 ]
