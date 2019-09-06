@@ -1,0 +1,194 @@
+@import '../../../../scss/colors';
+@import '../../../../scss/constants';
+
+.blog_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  background-color: $header-background;
+  -webkit-box-shadow: 0 4px 8px 1px $shadows-black;
+  -moz-box-shadow: 0 4px 8px 1px $shadows-black;
+  box-shadow: 0 4px 8px 1px $shadows-black;
+
+  a {
+    text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  h1 {
+    font-family: raleway-semibold, sans-serif;
+    color: $class-white;
+    font-weight: normal;
+    font-size: 48px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+    span {
+      font-family: raleway-light, sans-serif;
+      color: $function-color;
+      font-weight: normal;
+    }
+  }
+
+  .author_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background: $author-line;
+    width: 100%;
+    height: 24px;
+    font-family: raleway-regular, sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size: 13px;
+    border-top: 2px solid $author-line-border;
+    overflow: hidden;
+    z-index: 3;
+
+    .sticky_title {
+      flex: 1;
+      font-family: raleway-semibold, sans-serif;
+      color: $class-white;
+      font-weight: normal;
+      font-size: 15px;
+      transition: opacity 0.2s ease-in-out;
+      -webkit-transition: opacity 0.2s ease-in-out;
+      padding-left: 15px;
+      padding-bottom: 1px;
+      opacity: 0;
+
+      span {
+        font-family: raleway-light, sans-serif;
+        color: $function-color;
+        font-weight: normal;
+      }
+    }
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      overflow: visible;
+
+      .profile_pic {
+        top: 24px;
+      }
+
+      .sticky_title {
+        opacity: 1;
+        white-space: nowrap;
+      }
+    }
+
+    .profile_pic {
+      opacity: 0;
+      position: absolute;
+      background: url("../../../../assets/img/profile.pic.jpeg") no-repeat;
+      background-size: cover;
+      width: 190px;
+      height: 130px;
+      top: 120px;
+      transform: translateY(-5px);
+      -webkit-box-shadow: 5px 5px 15px $shadows-black;
+      -moz-box-shadow: 5px 5px 15px $shadows-black;
+      box-shadow: 5px 5px 15px $shadows-black;
+      border-radius: 0 0 0 6px;
+      pointer-events: none;
+      transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+      -webkit-transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    }
+
+    .author_name {
+      font-family: raleway-medium, sans-serif;
+      margin-left: 5px;
+      margin-right: 10px;
+      margin-top: 2px;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .author {
+      pointer-events: none;
+    }
+
+    .website_links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      height: 100%;
+      width: 55px;
+      background: url("../../../../assets/img/inner-arrow.svg");
+      padding: 0 8px;
+      margin-right: -60px;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+
+      .website_link {
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        height: 18px;
+        width: 18px;
+        margin-left: 8px;
+        background: #100F0F;
+
+        &.github {
+          mask: url("../../../../assets/img/github.icon.svg");
+          mask-position: center;
+          mask-repeat: no-repeat;
+        }
+
+        &.linkedIn {
+          mask: url("../../../../assets/img/linkedin.icon.svg");
+          mask-position: center;
+          mask-repeat: no-repeat;
+        }
+
+        &:hover {
+          background: $function-color;
+        }
+      }
+    }
+
+    &:hover {
+      .website_links {
+        margin-right: 0;
+      }
+
+      .profile_pic {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 500px) {
+        .sticky_title {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .blog_header {
+    align-items: center;
+    height: 100px;
+    h1 {
+      margin-left: 0;
+      margin-top: 10px;
+      font-size: 42px;
+    }
+    .author_line {
+      .profile_pic {
+        top: 100px;
+      }
+    }
+  }
+}

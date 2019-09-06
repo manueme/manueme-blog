@@ -1,0 +1,122 @@
+@import '../../../../scss/colors';
+
+.blog_entry_wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 272px;
+  background: $header-background;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .decor_gradient {
+    opacity: 0.5;
+    width: 100%;
+    height: 3px;
+    background: $entry-decoration;
+  }
+
+  .entry_date {
+    font-family: raleway-light, sans-serif;
+    font-size: 16px;
+    color: white;
+    opacity: 0.6;
+    text-align: right;
+    width: 100%;
+  }
+
+  .entry_header,
+  .entry_section {
+    display: flex;
+    color: white;
+  }
+  .entry_header {
+    width: 100%;
+  }
+
+  .entry_title {
+    font-family: raleway-semibold, sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+  }
+
+  .entry_contents {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 15px 40px;
+    flex: 1;
+
+    .entry_image {
+      height: 272px;
+      width: 320px;
+      object-fit: contain;
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      margin-right: 11px;
+      background: $line-separator;
+    }
+
+    .entry_description {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+
+      .entry_brief {
+        font-family: "Verdana", sans-serif;
+        opacity: 0.8;
+        font-size: 14px;
+        line-height: 1.58;
+        height: 100%;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .entry_section {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .entry_contents {
+      flex-direction: column;
+      align-items: center;
+      margin: 15px;
+
+      .entry_description {
+        margin-top: 15px;
+      }
+      .entry_image {
+        margin-right: 0;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .read_more_btn {
+    display: flex;
+    justify-content: center;
+    font-family: roboto-mono, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: $include-color;
+  }
+  .read_more_btn .comments {
+    margin: 0 5px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+  }
+  .read_more_btn:hover {
+    color: white;
+  }
+  .read_more_btn:hover .comments {
+    opacity: 0;
+  }
+}

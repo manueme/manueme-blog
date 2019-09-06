@@ -1,0 +1,6 @@
+<app-include-header includedFile="article.h"></app-include-header>
+<app-ide-constructor *ngIf="article" [spaceName]="'Article::'" [memberName]="'Article'" [startLine]="3">
+  <app-entry class="article_entry"
+    >
+    <div class="article_content" [innerHTML]="article"></div></app-entry>
+</app-ide-constructor>
