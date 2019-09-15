@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild('authorLine', { static: false }) authorView!: ElementRef;
   @ViewChild('header', { static: false }) headerView!: ElementRef;
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   checkScroll() {
     if (this.authorView && this.headerView) {
       const element = this.authorView.nativeElement as HTMLDivElement;
