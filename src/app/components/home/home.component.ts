@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IEntry } from '~/app/services/entry/entry';
+import { Entry } from '~/app/services/entry/entry';
 import { EntryService } from '~/app/services/entry/entry.service';
 import { Meta, Title } from '@angular/platform-browser';
 import { blogTitle } from '~/app/components/app.component';
@@ -11,7 +11,7 @@ import { blogTitle } from '~/app/components/app.component';
 })
 export class HomeComponent implements OnInit {
   errorMessage: string;
-  entries: IEntry[] | undefined;
+  entries: Entry[] | undefined;
 
   constructor(private entryService: EntryService, private meta: Meta, private titleService: Title) {
     titleService.setTitle(blogTitle);

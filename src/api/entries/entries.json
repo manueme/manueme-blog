@@ -1,5 +1,17 @@
 [
   {
+    "linkURL": "https://github.com/manueme/react-redux-boilerplate",
+    "linkText": "To Github!",
+    "title": "[CODE] - React 16.10 boilerplate with Redux",
+    "imgSrc": "https://www.manueme.com/images/boilerLogin.jpg",
+    "brief": "This is a project to start a React web application, it contains examples for login and sign up forms with dummy actions. It also has a private route component witch redirects to the login view if the user is not logged in or the local storage authentication data is not valid.",
+    "imgAlt": "",
+    "date": "2019/10/26",
+    "author": "Manuel Machado",
+    "keywords": "React",
+    "description": "My blog is ready to publish! So let's start with the first article. Here are some details of the implementation."
+  },
+  {
     "article": "pixsplat",
     "title": "Pixsplat",
     "imgSrc": "https://www.manueme.com/images/Grid.png",

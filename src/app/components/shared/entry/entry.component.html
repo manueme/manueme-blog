@@ -9,11 +9,16 @@
       <img class="entry_image" [alt]="entry.imgAlt" [src]="entry.imgSrc" />
       <div class="entry_description">
         <div class="entry_brief" [innerHTML]="entry.brief"></div>
-        <a class="read_more_btn" routerLink="/article/{{ entry.article }}" routerLinkActive="active"
-          ><div class="comments">{{ '/*  ' }}</div>
+        <a *ngIf="EntryIsArticle(entry)" class="read_more_btn" routerLink="/article/{{ entry.article }}" routerLinkActive="active">
+          <div class="comments">{{ '/*  ' }}</div>
           Read More
-          <div class="comments">{{ '  */' }}</div></a
-        >
+          <div class="comments">{{ '  */' }}</div>
+        </a>
+        <a *ngIf="!EntryIsArticle(entry)" class="read_more_btn" href="{{ entry.linkURL }}" routerLinkActive="active">
+          <div class="comments">{{ '/*  ' }}</div>
+          {{ entry.linkText }}
+          <div class="comments">{{ '  */' }}</div>
+        </a>
       </div>
     </div>
   </div>
