@@ -4,9 +4,9 @@
 .include_header {
   display: flex;
   .include_header_text {
-    font-family: roboto-mono-light, sans-serif;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
     font-size: 22px;
-    font-weight: normal;
     line-height: $ide-line-height;
     color: $include-color;
     margin-left: 8px;

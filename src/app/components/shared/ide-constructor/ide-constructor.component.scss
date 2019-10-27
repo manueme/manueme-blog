@@ -23,17 +23,17 @@
     }
 
     .member_space {
-      font-family: roboto-mono-light, sans-serif;
+      font-family: "Roboto Mono", sans-serif;
+      font-weight: 300;
       font-size: 22px;
-      font-weight: normal;
       line-height: $ide-line-height;
       color: $function-color2;
       margin-left: 8px;
     }
     .member {
-      font-family: roboto-mono-light, sans-serif;
+      font-family: "Roboto Mono", monospace;
+      font-weight: 300;
       font-size: 22px;
-      font-weight: normal;
       line-height: $ide-line-height;
       display: flex;
       align-items: center;
@@ -82,9 +82,9 @@
 
   .code {
     display: inline-block;
-    font-family: roboto-mono-light, sans-serif;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
     font-size: 22px;
-    font-weight: normal;
     line-height: $ide-line-height;
     color: $code-color;
     white-space: nowrap;

@@ -1,5 +1,4 @@
-export interface IEntry {
-  article: string;
+export interface IEntryBase {
   author: string;
   imgSrc: string;
   imgAlt: string;
@@ -8,9 +7,23 @@ export interface IEntry {
   date: string; // YYYY/MM/DD
   keywords: string;
   description: string;
+}
+
+export interface IArticleEntry extends IEntryBase {
+  article: string;
   htmlPath: string;
 }
 
-export interface IArticle extends IEntry {
+export interface ILinkEntry extends IEntryBase {
+  linkText: string;
+  linkURL: string;
+}
+
+export type Entry = IArticleEntry | ILinkEntry;
+export function EntryIsArticle(arg: Entry): arg is IArticleEntry {
+  return (arg as IArticleEntry).article !== undefined;
+}
+
+export interface IArticle extends IArticleEntry {
   html: string;
 }

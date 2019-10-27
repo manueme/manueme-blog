@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IEntry } from '~/app/services/entry/entry';
+import { Entry, EntryIsArticle, IArticleEntry } from '~/app/services/entry/entry';
 
 @Component({
   selector: 'app-entry',
@@ -7,7 +7,7 @@ import { IEntry } from '~/app/services/entry/entry';
   styleUrls: ['./entry.component.scss']
 })
 export class EntryComponent implements OnInit {
-  @Input() entry: IEntry | undefined;
+  @Input() entry: Entry | undefined;
   public entryDate: Date | undefined;
 
   constructor() {}
@@ -19,5 +19,9 @@ export class EntryComponent implements OnInit {
         parseInt(dateParts[1], 10) - 1,
         parseInt(dateParts[2], 10));
     }
+  }
+
+  EntryIsArticle(arg: Entry): arg is IArticleEntry {
+    return EntryIsArticle(arg);
   }
 }

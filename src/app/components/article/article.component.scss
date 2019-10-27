@@ -20,7 +20,8 @@
     }
 
     h1 {
-      font-family: raleway-bold, sans-serif;
+      font-family: Raleway, sans-serif;
+      font-weight: 700;
       font-size: 36px;
       margin-bottom: 25px;
       text-align: center;
@@ -28,7 +29,8 @@
     }
     h2 {
       opacity: 0.9;
-      font-family: raleway-bold, sans-serif;
+      font-family: Raleway, sans-serif;
+      font-weight: 700;
       font-size: 22px;
       margin-bottom: 25px;
       margin-top: 25px;
@@ -38,14 +40,16 @@
     h3 {
       color: #d3ff75;
       opacity: 0.9;
-      font-family: raleway-semibold, sans-serif;
+      font-family: Raleway, sans-serif;
+      font-weight: 600;
       font-size: 16px;
       margin-top: 20px;
       margin-bottom: 20px;
     }
 
     .article_date {
-      font-family: raleway-light, sans-serif;
+      font-family: Raleway, sans-serif;
+      font-weight: 300;
       font-size: 14px;
       color: white;
       opacity: 0.6;
@@ -119,7 +123,8 @@
       }
 
       .article_image_footer {
-        font-family: raleway-light, sans-serif;
+        font-family: Raleway, sans-serif;
+        font-weight: 300;
         font-size: 12px;
         text-align: center;
         font-style: italic;

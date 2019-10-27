@@ -3,13 +3,12 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, mergeMap, tap } from 'rxjs/operators';
 
-import { IArticle, IEntry } from './entry';
+import { IArticle, Entry, EntryIsArticle, IArticleEntry } from './entry';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EntryService {
-
   constructor(private http: HttpClient) {}
   private entriesUrl = 'api/entries/entries.json';
   private httpOptions = {
@@ -34,17 +33,17 @@ export class EntryService {
     return throwError(errorMessage);
   }
 
-  getEntries(): Observable<IEntry[]> {
-    return this.http.get<IEntry[]>(this.entriesUrl).pipe(
+  getEntries(): Observable<Entry[]> {
+    return this.http.get<Entry[]>(this.entriesUrl).pipe(
       tap(),
       catchError(EntryService.handleError)
     );
   }
 
   getArticle(articleName: string): Observable<IArticle | undefined> {
-    return this.http.get<IEntry[]>(this.entriesUrl).pipe(
+    return this.http.get<Entry[]>(this.entriesUrl).pipe(
       mergeMap(entries => {
-        const entry = entries.find(a => a.article === articleName);
+        const entry = entries.find(a => EntryIsArticle(a) && a.article === articleName) as IArticleEntry | undefined;
         if (!entry) {
           return throwError('Article not found');
         }

@@ -21,18 +21,23 @@
     -webkit-user-drag: none;
   }
 
+  .header_link {
+    padding-left: 40px;
+    padding-top: 20px;
+    flex: 1;
+    width: 100%;
+  }
+
   h1 {
-    font-family: raleway-semibold, sans-serif;
+    font-family: Raleway, sans-serif;
+    font-weight: 600;
     color: $class-white;
-    font-weight: normal;
     font-size: 48px;
-    margin-left: 40px;
-    margin-top: 20px;
 
     span {
-      font-family: raleway-light, sans-serif;
+      font-family: Raleway, sans-serif;
+      font-weight: 300;
       color: $function-color;
-      font-weight: normal;
     }
   }
 
@@ -44,9 +49,9 @@
     background: $author-line;
     width: 100%;
     height: 24px;
-    font-family: raleway-regular, sans-serif;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
     color: white;
-    font-weight: normal;
     font-size: 13px;
     border-top: 2px solid $author-line-border;
     overflow: hidden;
@@ -54,9 +59,9 @@
 
     .sticky_title {
       flex: 1;
-      font-family: raleway-semibold, sans-serif;
+      font-family: Raleway, sans-serif;
+      font-weight: 600;
       color: $class-white;
-      font-weight: normal;
       font-size: 15px;
       transition: opacity 0.2s ease-in-out;
       -webkit-transition: opacity 0.2s ease-in-out;
@@ -65,9 +70,9 @@
       opacity: 0;
 
       span {
-        font-family: raleway-light, sans-serif;
+        font-family: Raleway, sans-serif;
+        font-weight: 300;
         color: $function-color;
-        font-weight: normal;
       }
     }
 
@@ -106,7 +111,8 @@
     }
 
     .author_name {
-      font-family: raleway-medium, sans-serif;
+      font-family: Raleway, sans-serif;
+      font-weight: 500;
       margin-left: 5px;
       margin-right: 10px;
       margin-top: 2px;
@@ -157,6 +163,7 @@
       }
     }
 
+    .profile_pic:hover,
     &:hover {
       .website_links {
         margin-right: 0;
@@ -165,6 +172,7 @@
       .profile_pic {
         opacity: 1;
         transform: translateY(0);
+        pointer-events: visible;
       }
 
       @media (max-width: 500px) {
@@ -180,9 +188,12 @@
   .blog_header {
     align-items: center;
     height: 100px;
+    .header_link {
+      padding-left: 0;
+      padding-top: 10px;
+      text-align: center;
+    }
     h1 {
-      margin-left: 0;
-      margin-top: 10px;
       font-size: 42px;
     }
     .author_line {
