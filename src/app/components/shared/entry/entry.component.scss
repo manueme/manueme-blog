@@ -20,7 +20,6 @@
     color: white;
     opacity: 0.6;
     text-align: right;
-    width: 100%;
   }
 
   .entry_header,
@@ -36,7 +35,8 @@
     font-family: raleway-semibold, sans-serif;
     font-size: 22px;
     margin-bottom: 15px;
-    white-space: nowrap;
+    margin-right: 15px;
+    flex: 1;
   }
 
   .entry_contents {
