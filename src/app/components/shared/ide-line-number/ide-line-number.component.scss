@@ -4,7 +4,8 @@
 .line_number {
   height: $ide-line-height;
   width: $ide-side-bar-width;
-  font-family: roboto-mono-light, "Source Code Pro", monospace;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
   font-size: 22px;
   line-height: $ide-line-height;
   color: $line-numbers;

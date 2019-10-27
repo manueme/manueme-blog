@@ -15,7 +15,8 @@
   }
 
   .entry_date {
-    font-family: raleway-light, sans-serif;
+    font-family: Raleway, sans-serif;
+    font-weight: 300;
     font-size: 16px;
     color: white;
     opacity: 0.6;
@@ -32,7 +33,8 @@
   }
 
   .entry_title {
-    font-family: raleway-semibold, sans-serif;
+    font-family: Raleway, sans-serif;
+    font-weight: 600;
     font-size: 22px;
     margin-bottom: 15px;
     margin-right: 15px;
@@ -95,7 +97,8 @@
   .read_more_btn {
     display: flex;
     justify-content: center;
-    font-family: roboto-mono, sans-serif;
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 400;
     font-size: 16px;
     width: 100%;
     text-align: center;
