@@ -6,8 +6,8 @@ import { Component, OnInit, ElementRef, ViewChild, HostListener } from '@angular
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild('authorLine', { static: false }) authorView!: ElementRef;
-  @ViewChild('header', { static: false }) headerView!: ElementRef;
+  @ViewChild('authorLine') authorView!: ElementRef;
+  @ViewChild('header') headerView!: ElementRef;
 
   @HostListener('window:scroll')
   checkScroll() {

@@ -16,7 +16,7 @@ export class IdeConstructorComponent implements OnInit, OnChanges {
   private lineHeight = 55;
   private contentHeight = 0;
 
-  @ViewChild('ideConstructorBody', { static: false }) elementView!: ElementRef;
+  @ViewChild('ideConstructorBody') elementView!: ElementRef;
 
   constructor() {}
 
