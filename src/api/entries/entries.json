@@ -2,7 +2,7 @@
   {
     "linkURL": "https://github.com/manueme/proygrado",
     "linkText": "To Github!",
-    "title": "RTX Turing architecture investigation project",
+    "title": "RTX Turing architecture research",
     "imgSrc": "https://www.manueme.com/images/rtx.jpg",
     "brief": "In late 2018 NVIDIA released the Turing architecture intending to execute ray tracing in real-time (using RT cores) and speeding up the artificial intelligence process (using Tensor cores). Beyond commercial promises, NVIDIA's proposal is auspicious and deserves detailed analysis.<br/><br/>In this project, it is proposed to know more about the possibilities of RT cores for ray tracing development, as well as their real advantages compared to CPU or GPU development of previous generations. It is also proposed to study the Artificial Intelligence techniques developed by NVIDIA, and other research groups, for the improvement, denoising, and acceleration of the generation of images with ray tracing. For this, one or more ray-tracing applications will be carried out, which may have different objectives: physically realistic ray tracing, real-time ray tracing (with AI-based denoising), path tracing and other methodologies suitable for daylighting analysis.<br/><br/>Follow the project progress by visiting the project repository on GitHub",
     "imgAlt": "",
