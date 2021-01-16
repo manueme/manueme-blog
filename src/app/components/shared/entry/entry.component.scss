@@ -93,33 +93,4 @@
       }
     }
   }
-
-  .read_more_btn {
-    display: flex;
-    justify-content: center;
-    font-family: "Roboto Mono", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    margin-bottom: 15px;
-    margin-top: 20px;
-    text-decoration: none;
-    color: $include-color;
-  }
-  .read_more_btn .comments {
-    margin: 0 5px;
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-  }
-  .read_more_btn:hover {
-    color: white;
-  }
-  .read_more_btn:hover .comments {
-    opacity: 0;
-  }
 }

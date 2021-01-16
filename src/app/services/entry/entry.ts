@@ -20,7 +20,7 @@ export interface ILinkEntry extends IEntryBase {
 }
 
 export type Entry = IArticleEntry | ILinkEntry;
-export function EntryIsArticle(arg: Entry): arg is IArticleEntry {
+export function entryIsArticle(arg: Entry): arg is IArticleEntry {
   return (arg as IArticleEntry).article !== undefined;
 }
 

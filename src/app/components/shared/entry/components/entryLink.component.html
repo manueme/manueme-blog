@@ -1,0 +1,22 @@
+<ng-template #contentTpl><ng-content></ng-content></ng-template>
+<a *ngIf='entryIsArticle(entry)' class='{{commentStyle ? "read_more_btn" : undefined }}'
+   routerLink='{{ entryLink }}'
+   routerLinkActive='active'>
+  <ng-template [ngIf]="commentStyle">
+    <div class='comments'>{{ '/*  ' }}</div>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  <ng-template [ngIf]="commentStyle">
+    <div class='comments'>{{ '  */' }}</div>
+  </ng-template>
+</a>
+<a *ngIf='!entryIsArticle(entry)' class='{{commentStyle ? "read_more_btn" : undefined }}' href='{{ entryLink }}'
+   routerLinkActive='active'>
+  <ng-template [ngIf]="commentStyle">
+    <div class='comments'>{{ '/*  ' }}</div>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  <ng-template [ngIf]="commentStyle">
+    <div class='comments'>{{ '  */' }}</div>
+  </ng-template>
+</a>

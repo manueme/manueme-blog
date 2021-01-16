@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, mergeMap, tap } from 'rxjs/operators';
 
-import { IArticle, Entry, EntryIsArticle, IArticleEntry } from './entry';
+import { IArticle, Entry, entryIsArticle, IArticleEntry } from './entry';
 
 @Injectable({
   providedIn: 'root'
@@ -43,7 +43,7 @@ export class EntryService {
   getArticle(articleName: string): Observable<IArticle | undefined> {
     return this.http.get<Entry[]>(this.entriesUrl).pipe(
       mergeMap(entries => {
-        const entry = entries.find(a => EntryIsArticle(a) && a.article === articleName) as IArticleEntry | undefined;
+        const entry = entries.find(a => entryIsArticle(a) && a.article === articleName) as IArticleEntry | undefined;
         if (!entry) {
           return throwError('Article not found');
         }

@@ -1,29 +1,24 @@
-<div class="blog_entry_wrapper">
-  <div class="decor_gradient"></div>
-  <div class="entry_contents" *ngIf="entry">
-    <div class="entry_header">
-      <div class="entry_title">{{ entry.title }}</div>
-      <div class="entry_date" *ngIf="entryDate">{{ entryDate | date }}</div>
+<div class='blog_entry_wrapper'>
+  <div class='decor_gradient'></div>
+  <div class='entry_contents' *ngIf='entry'>
+    <div class='entry_header'>
+      <div class='entry_title'>{{ entry.title }}</div>
+      <div class='entry_date' *ngIf='entryDate'>{{ entryDate | date }}</div>
     </div>
-    <div class="entry_section">
-      <img class="entry_image" [alt]="entry.imgAlt" [src]="entry.imgSrc" />
-      <div class="entry_description">
-        <div class="entry_brief" [innerHTML]="entry.brief"></div>
-        <a *ngIf="EntryIsArticle(entry)" class="read_more_btn" routerLink="/article/{{ entry.article }}" routerLinkActive="active">
-          <div class="comments">{{ '/*  ' }}</div>
-          Read More
-          <div class="comments">{{ '  */' }}</div>
-        </a>
-        <a *ngIf="!EntryIsArticle(entry)" class="read_more_btn" href="{{ entry.linkURL }}" routerLinkActive="active">
-          <div class="comments">{{ '/*  ' }}</div>
-          {{ entry.linkText }}
-          <div class="comments">{{ '  */' }}</div>
-        </a>
+    <div class='entry_section'>
+      <app-entry-link [entry]='entry' [commentStyle]='false'>
+        <img class='entry_image' [alt]='entry.imgAlt' [src]='entry.imgSrc' />
+      </app-entry-link>
+      <div class='entry_description'>
+        <div class='entry_brief' [innerHTML]='entry.brief'></div>
+        <app-entry-link [entry]='entry' [commentStyle]='true'>
+          {{ entryIsArticle(entry) ? 'Read More' : entry.linkText }}
+        </app-entry-link>
       </div>
     </div>
   </div>
-  <div class="entry_contents" *ngIf="!entry">
+  <div class='entry_contents' *ngIf='!entry'>
     <ng-content></ng-content>
   </div>
-  <div class="decor_gradient"></div>
+  <div class='decor_gradient'></div>
 </div>

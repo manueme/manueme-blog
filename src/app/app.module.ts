@@ -13,6 +13,7 @@ import { LineJumpComponent } from './components/shared/line-jump/line-jump.compo
 import { HomeComponent } from '~/app/components/home/home.component';
 import { ArticleComponent } from './components/article/article.component';
 import { IdeConstructorComponent } from './components/shared/ide-constructor/ide-constructor.component';
+import { EntryLinkComponent } from '~/app/components/shared/entry/components/entryLink.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { IdeConstructorComponent } from './components/shared/ide-constructor/ide
     FooterComponent,
     IdeLineNumberComponent,
     EntryComponent,
+    EntryLinkComponent,
     IncludeHeaderComponent,
     LineJumpComponent,
     HomeComponent,
